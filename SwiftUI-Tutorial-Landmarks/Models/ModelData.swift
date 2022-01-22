@@ -9,7 +9,9 @@ import Foundation
 import Combine
 
 final class ModelData: ObservableObject {
+    //要修改的要带Published属性
     @Published var landmarks: [Landmark] = load("landmarkData.json")
+    var hikes: [Hike] = load("hikeData.json")
 }
 
 
