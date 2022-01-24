@@ -9,8 +9,10 @@ import Foundation
 import Combine
 
 final class ModelData: ObservableObject {
-    //要修改的要带Published属性
+    //@开头的东西叫做Property Wrapper
+    //要观察并联动修改的要带Published
     @Published var landmarks: [Landmark] = load("landmarkData.json")
+    @Published var profile = Profile.default
     var hikes: [Hike] = load("hikeData.json")
     var features: [Landmark] {
         landmarks.filter { $0.isFeatured }

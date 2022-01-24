@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LandmarkList: View {
-    //@EnvironmentObject在多个view之间共享数据，并且可以作为被观察者
+    //@EnvironmentObject在多个view之间共享数据，并且可以作为被观察者，一旦改动isFavorite就会同步回json里
     @EnvironmentObject var modelData: ModelData
     @State private var showFavoritesOnly = false
     //computed property,返回一个计算结果，只读
